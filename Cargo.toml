@@ -1,0 +1,14 @@
+[package]
+name = "btcwallet"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+description = "Inspect legacy Berkeley DB 4.8 bitcoin wallet.dat files"
+license = "MIT"
+
+[dependencies]
+outscript = { version = "0.2.7", default-features = false, features = ["bitcoin"] }
+purecrypto = { version = "0.10.4", default-features = false, features = ["std", "tls"] }
+
+[profile.release]
+strip = true
